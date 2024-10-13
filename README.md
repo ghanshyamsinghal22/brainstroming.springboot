@@ -71,57 +71,14 @@
     </li>
 </ul>
 
-<h2>Setup and Installation</h2>
 
-<h3>Prerequisites</h3>
 <ul>
-    <li><strong>Java 11+</strong></li>
-    <li><strong>Spring Boot</strong></li>
-    <li><strong>MySQL/PostgreSQL</strong></li>
-    <li><strong>MongoDB</strong></li>
-    <li><strong>Kafka</strong> (for distributed messaging)</li>
-    <li><strong>Docker</strong> (optional, for containerization and easy deployment)</li>
-</ul>
-
-<h3>Steps</h3>
-<ol>
-    <li><strong>Clone the Repository</strong>
-        <pre><code>git clone https://github.com/your-username/brainstorming.git
-cd brainstorming</code></pre>
-    </li>
-    <li><strong>Set Up Databases</strong>
-        <ul>
-            <li>Install and configure <strong>MySQL/PostgreSQL</strong> for storing structured data like users, submissions, and problems.</li>
-            <li>Install <strong>MongoDB</strong> to store large files like test cases and solutions.</li>
-        </ul>
-    </li>
-    <li><strong>Install Kafka</strong>
-        <ul>
-            <li>Download and install <strong>Apache Kafka</strong>. Refer to the <a href="https://kafka.apache.org/quickstart">Kafka Quickstart Guide</a> for installation instructions.</li>
-        </ul>
-    </li>
-    <li><strong>Configure Application Properties</strong>
-        <ul>
-            <li>Update <code>application.properties</code> or <code>application.yml</code> for both Brainstorming and Tester servers with the appropriate database and Kafka configuration.</li>
-        </ul>
-    </li>
-    <li><strong>Build and Run the Project</strong>
-        <ul>
-            <li>To run the <strong>Brainstorming server</strong>:
-                <pre><code>mvn spring-boot:run -Dserver.port=8080</code></pre>
-            </li>
-            <li>To run a <strong>Tester server</strong> (port can be changed for multiple instances):
-                <pre><code>mvn spring-boot:run -Dserver.port=9090</code></pre>
-            </li>
-        </ul>
-    </li>
     <li><strong>Scale Tester Servers</strong>
         <ul>
             <li>You can deploy multiple Tester servers, each consuming submission tasks from Kafka. This helps in balancing the load, reducing response times, and efficiently processing submissions.</li>
         </ul>
     </li>
-</ol>
-
+</ul>
 <h2>Usage</h2>
 <ol>
     <li><strong>Brainstorming Server</strong>: Handles:
